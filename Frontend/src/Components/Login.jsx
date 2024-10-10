@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Login = () => {
+  const navigatet = useNavigate()
   const [loginData, setLoginData] = useState({ email: "", password: "" });
 
   const changeHandler = (e) => {
@@ -17,6 +18,7 @@ const Login = () => {
       }
     }).then((response)=>{
        console.log(`response data`,response.data)
+       navigatet("/")
     }).catch((err)=>{
       console.log(`error while logiing`,err)
     })

@@ -7,11 +7,17 @@ const Home = () => {
    
     <div className='w-full h-screen bg-no-repeat bg-cover bg-center bg-[url("https://assets.nflxext.com/ffe/siteui/vlv3/4d2c5849-b306-4884-9036-6211f7ee0178/web/IN-en-20240930-TRIFECTA-perspective_1e1ca6cd-9e2d-4e9d-9e4b-ba0c2d3a0e31_small.jpg")] bg-opacity-100'>
         {/* Navigation Bar */}
-        <nav className='flex items-center lg:mt-[-35px] sm:mt-[-10px] md:mt[-10px] justify-between bg-gradient-to-b from-black p-4 md:p-6'>
+        
+        <nav className='flex items-center relative lg:mt-[-35px] sm:mt-[-10px] md:mt[-10px]  bg-gradient-to-b from-black p-4 md:p-6'>
             <img className='w-40 sm:w-60' src="https://images.ctfassets.net/y2ske730sjqp/6bhPChRFLRxc17sR8jgKbe/6fa1c6e6f37acdc97ff635cf16ba6fb3/Logos-Readability-Netflix-logo.png" alt="Netflix Logo" />
             <Link to="/login">
-                <button className='bg-red-600 px-4 py-2 w-[100px] text-white font-semibold rounded-md hover:bg-red-700 transition duration-300'>
+                <button className='bg-red-600 absolute right-8 top-14 px-4 py-2 w-[100px] text-white font-semibold rounded-md hover:bg-red-700 transition duration-300'>
                     Sign In
+                </button>
+            </Link>
+            <Link to="/login">
+                <button className='bg-red-600 absolute top-14 right-36 px-4 py-2 w-[100px] text-white font-semibold rounded-md hover:bg-red-700 transition duration-300'>
+                    Logout
                 </button>
             </Link>
         </nav>

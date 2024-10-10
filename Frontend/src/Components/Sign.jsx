@@ -18,7 +18,8 @@ const Sign = () => {
     axios.post('http://localhost:3000/api/v1/register', signup, {
       headers: {
         'Content-Type': 'application/json'
-      }
+      },
+       withCredentials: true
     })
     .then(response => {
       console.log('Response:', response.data);
